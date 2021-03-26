@@ -24,7 +24,7 @@ function createFormControls() {
     option1: createOptionControl(1),
     option2: createOptionControl(2),
     option3: createOptionControl(3),
-    option4: createOptionControl(4),
+    option4: createOptionControl(4)
   }
 }
 
@@ -51,7 +51,7 @@ class QuizCreator extends Component {
         {text: option1.value, id: option1.id},
         {text: option2.value, id: option2.id},
         {text: option3.value, id: option3.id},
-        {text: option4.value, id: option4.id},
+        {text: option4.value, id: option4.id}
       ]
     }
 
@@ -68,12 +68,10 @@ class QuizCreator extends Component {
     e.preventDefault()
 
     this.setState({
-      quiz: [],
       isFormValid: false,
       rightAnswerId: 1,
       formControls: createFormControls()
     })
-
     this.props.finishCreateQuiz()
   }
 
@@ -129,14 +127,14 @@ class QuizCreator extends Component {
         {text: 1, value: 1},
         {text: 2, value: 2},
         {text: 3, value: 3},
-        {text: 4, value: 4},
+        {text: 4, value: 4}
       ]}
     />
 
     return (
       <div className={s.QuizCreator}>
         <div>
-          <h1>Создание тестов</h1>
+          <h1>Создание теста</h1>
 
           <form onSubmit={this.submitHandler}>
             {this.renderControls()}

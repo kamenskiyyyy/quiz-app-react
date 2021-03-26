@@ -17,8 +17,8 @@ class Quiz extends Component {
 
   render() {
     return (
-      <div className={s.quiz}>
-        <div className={s.quizWrapper}>
+      <div className={s.Quiz}>
+        <div className={s.QuizWrapper}>
           <h1>Викторина</h1>
           {
             this.props.loading || !this.props.quiz
@@ -27,14 +27,16 @@ class Quiz extends Component {
               ? <FinishedQuiz
                 results={this.props.results}
                 quiz={this.props.quiz}
-                onRetry={this.retryQuiz}/>
+                onRetry={this.props.retryQuiz}
+              />
               : <ActiveQuiz
                 answers={this.props.quiz[this.props.activeQuestion].answers}
                 question={this.props.quiz[this.props.activeQuestion].question}
                 onAnswerClick={this.props.quizAnswerClick}
-                quizLenght={this.props.quiz.length}
+                quizLength={this.props.quiz.length}
                 answerNumber={this.props.activeQuestion + 1}
-                state={this.props.answerState}/>
+                state={this.props.answerState}
+              />
           }
         </div>
       </div>

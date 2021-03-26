@@ -19,7 +19,7 @@ class Auth extends Component {
         touched: false,
         validation: {
           required: true,
-          email: true,
+          email: true
         }
       },
       password: {

@@ -5,7 +5,7 @@ import {
   FETCH_QUIZES_START,
   FETCH_QUIZES_SUCCESS, FINISH_QUIZ, QUIZ_NEXT_QUESTION, QUIZ_RETRY,
   QUIZ_SET_STATE
-} from "./actionTypes";
+} from './actionTypes'
 
 export function fetchQuizes() {
   return async dispatch => {
@@ -106,6 +106,7 @@ export function quizAnswerClick(answerId) {
         return
       }
     }
+
     const question = state.quiz[state.activeQuestion]
     const results = state.results
 

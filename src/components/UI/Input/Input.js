@@ -7,7 +7,7 @@ function isInvalid({valid, touched, shouldValidate}) {
 const Input = props => {
   const inputType = props.type || 'text'
   const cls = [s.Input]
-  const htmlForm = `${inputType}-${Math.random()}`
+  const htmlFor = `${inputType}-${Math.random()}`
 
   if (isInvalid(props)) {
     cls.push(s.invalid)
@@ -15,10 +15,10 @@ const Input = props => {
 
   return (
     <div className={cls.join(' ')}>
-      <label htmlFor={htmlForm}>{props.label}</label>
+      <label htmlFor={htmlFor}>{props.label}</label>
       <input
         type={inputType}
-        id={htmlForm}
+        id={htmlFor}
         value={props.value}
         onChange={props.onChange}
       />

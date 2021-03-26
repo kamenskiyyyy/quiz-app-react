@@ -4,7 +4,7 @@ import {
   FETCH_QUIZES_START,
   FETCH_QUIZES_SUCCESS, FINISH_QUIZ, QUIZ_NEXT_QUESTION, QUIZ_RETRY,
   QUIZ_SET_STATE
-} from "../actions/actionTypes";
+} from '../actions/actionTypes';
 
 const initialState = {
   quizes: [],
@@ -49,7 +49,11 @@ export default function quizReducer(state = initialState, action) {
       }
     case QUIZ_RETRY:
       return {
-        ...state, activeQuestion: 0, answerState: null, isFinished: false, results: {}
+        ...state,
+        activeQuestion: 0,
+        answerState: null,
+        isFinished: false,
+        results: {}
       }
     default:
       return state
